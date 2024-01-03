@@ -1,0 +1,15 @@
+<h1>Create new task</h1>
+
+<%= form_for @task do |f| %>
+<%= debug @task %> <!-- This line will help you to debug -->
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <br>
+  <%= f.label :details %>
+  <%= f.text_area :details %>
+  <br>
+  <%= f.label :completed %>
+  <%= f.check_box :completed %>
+  <br>
+  <%= f.submit %>
+<% end %>
