@@ -1,2 +1,10 @@
 <h1>Tasks#index</h1>
 <p>Find me in app/views/tasks/index.html.erb</p>
+
+<% @tasks.each do |task| %>
+  <div class="card m-3 d-flex jutify-content-center text-center p-2 w-50">
+    <p><%= task.title %></p><br>
+    <p><%= task.details %></p>
+    <input type="checkbox" <% if task.completed == true %> <%="checked"%> <% end %>>
+  </div>
+<% end %>
