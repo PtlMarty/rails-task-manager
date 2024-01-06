@@ -1,0 +1,15 @@
+
+<%= form_with model: task do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title, class:"form-control" %>
+  <br>
+  <%= f.label :details %>
+  <%= f.text_area :details, class:"form-control" %>
+  <br>
+  <div aria-label="Basic checkbox toggle button">
+    <%= f.check_box :completed, class:"btn-check" %>
+    <%= f.label :completed, class:"btn btn-outline-primary" %>
+  </div>
+  <br>
+  <%= f.submit class: "btn btn-success m-3" %>
+<% end %>

@@ -1,11 +1,13 @@
-<h1>this is the task</h1>
-
-<p>
-  <strong>Title:</strong>
-  <%= @task.title %>
-  <%= @task.details %>
-  <%= @task.completed %>
-</p>
-
-
-<%= link_to 'Back', root_path %>
+<div class="container d-flex flex-column justify-content-center align-items-center text-center">
+  <h1>this is the task</h1>
+  <div class="card w-75 flex-column">
+    <div class="card-body">
+      <h5 class="card-text"><%= @task.title %></h5>
+      <hr>
+      <p class="card-text"><%= @task.details %></p>
+      <hr>
+      <p class="card-text"><%= @task.completed ? '✅' : '❌' %></p>
+    </div>
+  </div>
+  <%= link_to 'Back', root_path, class:"mt-3" %>
+</div>

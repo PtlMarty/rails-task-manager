@@ -1,14 +1,6 @@
-<h1>Create new task</h1>
+<div class="container d-flex flex-column justify-content-center align-items-center text-center">
+<h1>New task</h1>
 
-<%= form_for @task do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-  <br>
-  <%= f.label :details %>
-  <%= f.text_area :details %>
-  <br>
-  <%= f.label :completed %>
-  <%= f.check_box :completed %>
-  <br>
-  <%= f.submit %>
-<% end %>
+<%= render 'form', task: @task%>
+
+</div>
